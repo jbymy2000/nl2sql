@@ -1,0 +1,11 @@
+chromadb==0.4.13
+gradio==4.38.1
+httptools==0.6.1
+langchain==0.2.9
+langchainhub==0.1.20
+pipdeptree==2.23.1
+setuptools==69.5.1
+uvloop==0.19.0
+watchfiles==0.22.0
+wheel==0.43.0
+greenlet==1.1.0
