@@ -1,0 +1,2 @@
+OPENAI_API_KEY="xxx"
+ZHIPU_API_KEY="xxx"
