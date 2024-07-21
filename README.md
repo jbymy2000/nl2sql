@@ -8,3 +8,12 @@ embedings使用openai的api
 使用前请把openai和zhipu的api_key写入到config里面
 
 <img width="1207" alt="image" src="https://github.com/user-attachments/assets/570858d9-516b-4170-9312-1c28ba194bac">
+
+
+# Agent CoT
+通过Langchain Agent 和 ChatGLM-4 实现Agent 工具调用
+启动方法：
+```python
+streamlit run src/main.py
+```
+
