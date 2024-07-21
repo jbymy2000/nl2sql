@@ -51,7 +51,7 @@ def run_web():
         fn=chat, examples=["公司有多少人？","sony公司的成立日期"], title="SQL小助手")
 
     demo.queue()
-    demo.launch()
+    demo.launch(share=True)
 
 
 if __name__ == '__main__':

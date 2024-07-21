@@ -1,22 +1,36 @@
 from langchain.callbacks.manager import Callbacks
-from langchain.chat_models import ChatOpenAI
-from langchain.vectorstores import Chroma
-from langchain.embeddings import OpenAIEmbeddings, CacheBackedEmbeddings
+from langchain.embeddings import CacheBackedEmbeddings
 from langchain.storage import LocalFileStore
 from langchain.indexes import SQLRecordManager, index
-from langchain.docstore.document import Document
 from typing import List, Dict
 from collections import defaultdict
 from langchain.indexes._api import _batch
 from config import ZHIPU_API_KEY,OPENAI_API_KEY
+from langchain_openai import ChatOpenAI
+from langchain_community.embeddings import OpenAIEmbeddings
+from langchain_community.vectorstores import Chroma
+from langchain_core.documents import Document
 
 
+# def get_llm(
+#         streaming: bool = True,
+#         callbacks: Callbacks = None) -> ChatOpenAI:
+#     llm = ChatOpenAI(
+#         temperature=0,
+#         model="gpt-3.5-turbo",
+#         openai_api_key=OPENAI_API_KEY,
+#         # openai_api_base="https://open.bigmodel.cn/api/paas/v4/",
+#         streaming=streaming,
+#         callbacks=callbacks
+#     )
+#     return llm
+#
 def get_llm(
         streaming: bool = True,
         callbacks: Callbacks = None) -> ChatOpenAI:
     llm = ChatOpenAI(
-        temperature=0.95,
-        model="glm-4",
+        temperature=0,
+        model="glm-4-alltools",
         openai_api_key=ZHIPU_API_KEY,
         openai_api_base="https://open.bigmodel.cn/api/paas/v4/",
         streaming=streaming,
